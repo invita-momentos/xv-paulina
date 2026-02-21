@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XV Años · Paulina</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Jost:wght@200;300;400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --gold: #C9A96E;
-            --gold-light: #EDD9B2;
-            --gold-soft: #F8EEDC;
-            --blush: #F5E0E0;
-            --blush-mid: #EAC8C8;
-            --rose: #E8B4B4;
-            --sage: #B8C9B0;
-            --sage-light: #DDE8D8;
-            --lavender: #E8DEF0;
-            --cream: #FAF8F4;
-            --petal: #FEF7F7;
-            --beige: #F3EDE3;
-            --beige-deep: #EAE0D2;
-            --text-dark: #4A3F38;
-            --text-mid: #7A6E68;
-            --text-light: #A89E98;
+            --gold:        #C9A96E;
+            --gold-light:  #EDD9B2;
+            --gold-soft:   #F8EEDC;
+            --blush:       #F5E0E0;
+            --blush-mid:   #EAC8C8;
+            --rose:        #E8B4B4;
+            --sage:        #B8C9B0;
+            --sage-light:  #DDE8D8;
+            --lavender:    #E8DEF0;
+            --cream:       #FAF8F4;
+            --petal:       #FEF7F7;
+            --beige:       #F3EDE3;
+            --beige-deep:  #EAE0D2;
+            --text-dark:   #4A3F38;
+            --text-mid:    #7A6E68;
+            --text-light:  #A89E98;
             --font-script: 'Great Vibes', cursive;
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-sans: 'Jost', sans-serif;
+            --font-serif:  'Cormorant Garamond', serif;
+            --font-sans:   'Jost', sans-serif;
         }
 
-        html {
-            scroll-behavior: smooth;
-            scroll-snap-type: y mandatory;
-        }
-
+        html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
         body {
             font-family: var(--font-serif);
             background: var(--cream);
@@ -64,10 +53,8 @@
         section::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 90px;
+            bottom: 0; left: 0;
+            width: 100%; height: 90px;
             pointer-events: none;
             z-index: 5;
         }
@@ -82,25 +69,21 @@
         }
 
         .divider {
-            width: 150px;
-            height: 1px;
+            width: 150px; height: 1px;
             background: linear-gradient(to right, transparent, var(--gold), transparent);
             margin: 1.1rem auto;
             position: relative;
         }
-
         .divider::before {
             content: '✦';
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             color: var(--gold);
             font-size: 0.5rem;
             line-height: 1;
             padding: 0 6px;
-            background: inherit;
-            /* inherits section bg */
+            background: inherit; /* inherits section bg */
         }
 
         .s-label {
@@ -126,194 +109,125 @@
             transform: translateY(26px);
             transition: opacity .9s ease, transform .9s ease;
         }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
 
         /* ──────────────────────────────────
            HOJA 1 · HERO
         ────────────────────────────────── */
-        #h1 {
-            background: var(--petal);
-        }
-
-        #h1::after {
-            background: linear-gradient(to bottom, transparent, var(--petal));
-        }
+        #h1 { background: var(--petal); }
+        #h1::after { background: linear-gradient(to bottom, transparent, var(--petal)); }
 
         #h1 .bg {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background: url('assets/imagenes/fondo1.jpeg') center/cover no-repeat;
             opacity: .58;
         }
-
         #h1 .ov {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at center, rgba(254, 247, 247, .15) 0%, rgba(254, 247, 247, .55) 100%);
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at center, rgba(254,247,247,.15) 0%, rgba(254,247,247,.55) 100%);
         }
 
         .hero-pre {
             font-family: var(--font-sans);
-            font-size: .68rem;
-            letter-spacing: 6px;
+            font-size: .68rem; letter-spacing: 6px;
             text-transform: uppercase;
             color: var(--text-mid);
             margin-bottom: .8rem;
-            opacity: 0;
-            animation: up 1s .4s forwards;
+            opacity: 0; animation: up 1s .4s forwards;
         }
-
         .hero-sub {
             font-family: var(--font-serif);
-            font-size: 1.1rem;
-            font-style: italic;
+            font-size: 1.1rem; font-style: italic;
             color: var(--text-mid);
             margin-bottom: .3rem;
-            opacity: 0;
-            animation: up 1s .7s forwards;
+            opacity: 0; animation: up 1s .7s forwards;
         }
-
         .hero-name {
             font-family: var(--font-script);
             font-size: clamp(5rem, 16vw, 9rem);
             color: var(--text-dark);
             padding-top: 1rem;
-            line-height: 1;
-            margin: .3rem 0 1.5rem;
-            opacity: 0;
-            animation: up 1s 1s forwards;
-            text-shadow: 0 2px 18px rgba(201, 169, 110, .2);
+            line-height: 1; margin: .3rem 0 1.5rem;
+            opacity: 0; animation: up 1s 1s forwards;
+            text-shadow: 0 2px 18px rgba(201,169,110,.2);
         }
-
         .hero-badge {
             display: inline-block;
             font-family: var(--font-serif);
-            font-size: .8rem;
-            letter-spacing: 8px;
+            font-size: .8rem; letter-spacing: 8px;
             text-transform: uppercase;
             color: var(--gold);
             border: 1px solid var(--gold-light);
             padding: .65rem 2.2rem;
             border-radius: 50px;
-            background: rgba(255, 255, 255, .65);
+            background: rgba(255,255,255,.65);
             backdrop-filter: blur(8px);
-            opacity: 0;
-            animation: up 1s 1.3s forwards;
+            opacity: 0; animation: up 1s 1.3s forwards;
         }
 
         .scroll-cue {
-            position: absolute;
-            bottom: 2.5rem;
-            left: 50%;
+            position: absolute; bottom: 2.5rem; left: 50%;
             transform: translateX(-50%);
             z-index: 10;
-            opacity: 0;
-            animation: up 1s 2.1s forwards;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: .4rem;
+            opacity: 0; animation: up 1s 2.1s forwards;
+            display: flex; flex-direction: column; align-items: center; gap: .4rem;
             color: var(--text-light);
-            font-family: var(--font-sans);
-            font-size: .56rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            font-family: var(--font-sans); font-size: .56rem;
+            letter-spacing: 3px; text-transform: uppercase;
         }
-
         .scroll-cue .line {
-            width: 1px;
-            height: 36px;
+            width: 1px; height: 36px;
             background: linear-gradient(to bottom, var(--gold), transparent);
             animation: linePulse 2s ease-in-out infinite;
         }
-
         @keyframes linePulse {
-
-            0%,
-            100% {
-                opacity: .4;
-                transform: scaleY(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scaleY(1.18);
-            }
+            0%,100% { opacity:.4; transform: scaleY(1); }
+            50%      { opacity: 1; transform: scaleY(1.18); }
         }
 
         /* ──────────────────────────────────
            HOJA 2 · MENSAJE
         ────────────────────────────────── */
-        #h2 {
-            background: var(--cream);
-        }
-
-        #h2::after {
-            background: linear-gradient(to bottom, transparent, var(--cream));
-        }
+        #h2 { background: var(--cream); }
+        #h2::after { background: linear-gradient(to bottom, transparent, var(--cream)); }
 
         #h2 .bg {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background: url('assets/imagenes/fondo2.jpeg') center/cover no-repeat;
             opacity: .38;
         }
-
         #h2 .ov {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background: linear-gradient(to bottom,
-                    rgba(250, 248, 244, .72) 0%,
-                    rgba(250, 248, 244, .2) 30%,
-                    rgba(250, 248, 244, .2) 70%,
-                    rgba(250, 248, 244, .72) 100%);
+                rgba(250,248,244,.72) 0%,
+                rgba(250,248,244,.2) 30%,
+                rgba(250,248,244,.2) 70%,
+                rgba(250,248,244,.72) 100%);
         }
 
         .quote-mark {
             font-family: var(--font-script);
-            font-size: 5rem;
-            color: var(--gold);
-            line-height: .5;
-            display: block;
-            margin-bottom: .7rem;
-            opacity: .4;
+            font-size: 5rem; color: var(--gold);
+            line-height: .5; display: block;
+            margin-bottom: .7rem; opacity: .4;
         }
-
         .msg-text {
             font-family: var(--font-serif);
             font-size: clamp(1rem, 2.5vw, 1.22rem);
-            font-style: italic;
-            line-height: 2;
-            color: var(--text-dark);
-            font-weight: 300;
+            font-style: italic; line-height: 2;
+            color: var(--text-dark); font-weight: 300;
         }
 
         /* ──────────────────────────────────
            HOJA 3 · DETALLES
         ────────────────────────────────── */
-        #h3 {
-            background: linear-gradient(160deg, var(--beige) 0%, var(--beige-deep) 100%);
-        }
-
+        #h3 { background: linear-gradient(160deg, var(--beige) 0%, var(--beige-deep) 100%); }
         #h3::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            z-index: 4;
-            pointer-events: none;
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 80px; z-index: 4; pointer-events: none;
             background: linear-gradient(to bottom, var(--cream), transparent);
         }
-
-        #h3::after {
-            background: linear-gradient(to bottom, transparent, var(--beige-deep));
-        }
+        #h3::after { background: linear-gradient(to bottom, transparent, var(--beige-deep)); }
 
         .det-grid {
             display: grid;
@@ -322,999 +236,790 @@
             margin: 2.4rem auto 0;
             gap: 1.3rem;
         }
-
         .det-card {
-            background: rgba(255, 255, 255, .84);
-            border: 1px solid rgba(201, 169, 110, .16);
+            background: rgba(255,255,255,.84);
+            border: 1px solid rgba(201,169,110,.16);
             border-radius: 22px;
             padding: 2.1rem 1.5rem;
             text-align: center;
             backdrop-filter: blur(10px);
-            box-shadow: 0 5px 24px rgba(74, 63, 56, .05);
+            box-shadow: 0 5px 24px rgba(74,63,56,.05);
             transition: transform .35s, box-shadow .35s;
         }
-
-        .det-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 14px 36px rgba(74, 63, 56, .1);
-        }
+        .det-card:hover { transform: translateY(-7px); box-shadow: 0 14px 36px rgba(74,63,56,.1); }
 
         .det-icon {
-            width: 56px;
-            height: 56px;
+            width: 56px; height: 56px;
             margin: 0 auto 1rem;
-            background: linear-gradient(135deg, rgba(201, 169, 110, .13), rgba(201, 169, 110, .05));
-            border: 1px solid rgba(201, 169, 110, .18);
+            background: linear-gradient(135deg, rgba(201,169,110,.13), rgba(201,169,110,.05));
+            border: 1px solid rgba(201,169,110,.18);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             font-size: 1.45rem;
         }
-
         .det-label {
             font-family: var(--font-sans);
-            font-size: .58rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--gold);
+            font-size: .58rem; letter-spacing: 4px;
+            text-transform: uppercase; color: var(--gold);
             margin-bottom: .5rem;
         }
-
         .det-val {
             font-family: var(--font-serif);
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            line-height: 1.5;
+            font-size: 1.1rem; color: var(--text-dark); line-height: 1.5;
         }
-
         .det-sub {
             font-family: var(--font-sans);
-            font-size: .75rem;
-            color: var(--text-light);
-            margin-top: .3rem;
-            font-weight: 300;
+            font-size: .75rem; color: var(--text-light);
+            margin-top: .3rem; font-weight: 300;
         }
 
         .map-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: .6rem;
-            margin-top: 2.2rem;
-            padding: .9rem 2.4rem;
+            display: inline-flex; align-items: center; gap: .6rem;
+            margin-top: 2.2rem; padding: .9rem 2.4rem;
             background: linear-gradient(135deg, var(--gold), #B8914E);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-family: var(--font-sans);
-            font-size: .72rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            cursor: pointer;
-            box-shadow: 0 6px 20px rgba(201, 169, 110, .35);
+            color: white; border: none; border-radius: 50px;
+            font-family: var(--font-sans); font-size: .72rem;
+            letter-spacing: 2px; text-transform: uppercase;
+            text-decoration: none; cursor: pointer;
+            box-shadow: 0 6px 20px rgba(201,169,110,.35);
             transition: transform .3s, box-shadow .3s;
         }
-
-        .map-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(201, 169, 110, .45);
-        }
+        .map-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(201,169,110,.45); }
 
         /* ──────────────────────────────────
            HOJA 4 · COUNTDOWN
         ────────────────────────────────── */
-        #h4 {
-            background: linear-gradient(150deg, var(--blush) 0%, var(--lavender) 50%, var(--sage-light) 100%);
-        }
-
+        #h4 { background: linear-gradient(150deg, var(--blush) 0%, var(--lavender) 50%, var(--sage-light) 100%); }
         #h4::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            z-index: 4;
-            pointer-events: none;
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 80px; z-index: 4; pointer-events: none;
             background: linear-gradient(to bottom, var(--beige-deep), transparent);
         }
-
-        #h4::after {
-            background: linear-gradient(to bottom, transparent, var(--sage-light));
-        }
+        #h4::after { background: linear-gradient(to bottom, transparent, var(--sage-light)); }
 
         /* falling petals */
-        .petals {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
+        .petals { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
         .petals span {
-            position: absolute;
-            font-size: 1.1rem;
-            opacity: .18;
+            position: absolute; font-size: 1.1rem; opacity: .18;
             animation: fallPetal linear infinite;
         }
-
-        .petals span:nth-child(1) {
-            left: 8%;
-            animation-duration: 12s;
-            animation-delay: 0s;
-        }
-
-        .petals span:nth-child(2) {
-            left: 28%;
-            animation-duration: 16s;
-            animation-delay: 2s;
-        }
-
-        .petals span:nth-child(3) {
-            left: 52%;
-            animation-duration: 11s;
-            animation-delay: 4s;
-        }
-
-        .petals span:nth-child(4) {
-            left: 74%;
-            animation-duration: 14s;
-            animation-delay: 1s;
-        }
-
-        .petals span:nth-child(5) {
-            left: 90%;
-            animation-duration: 13s;
-            animation-delay: 3s;
-        }
-
+        .petals span:nth-child(1){left:8%;  animation-duration:12s; animation-delay:0s;}
+        .petals span:nth-child(2){left:28%; animation-duration:16s; animation-delay:2s;}
+        .petals span:nth-child(3){left:52%; animation-duration:11s; animation-delay:4s;}
+        .petals span:nth-child(4){left:74%; animation-duration:14s; animation-delay:1s;}
+        .petals span:nth-child(5){left:90%; animation-duration:13s; animation-delay:3s;}
         @keyframes fallPetal {
-            0% {
-                transform: translateY(-40px) rotate(0deg);
-                opacity: 0;
-            }
-
-            10% {
-                opacity: .18;
-            }
-
-            90% {
-                opacity: .12;
-            }
-
-            100% {
-                transform: translateY(110vh) rotate(360deg);
-                opacity: 0;
-            }
+            0%   { transform: translateY(-40px) rotate(0deg); opacity:0; }
+            10%  { opacity:.18; }
+            90%  { opacity:.12; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity:0; }
         }
 
         .cd-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            margin: 2.5rem 0;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1rem; margin: 2.5rem 0;
         }
-
         .cd-card {
-            background: rgba(255, 255, 255, .72);
-            border: 1px solid rgba(201, 169, 110, .18);
-            border-radius: 20px;
-            padding: 2rem .7rem;
+            background: rgba(255,255,255,.72);
+            border: 1px solid rgba(201,169,110,.18);
+            border-radius: 20px; padding: 2rem .7rem;
             text-align: center;
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 18px rgba(74, 63, 56, .06);
+            box-shadow: 0 4px 18px rgba(74,63,56,.06);
             transition: transform .3s;
         }
-
-        .cd-card:hover {
-            transform: translateY(-4px);
-        }
+        .cd-card:hover { transform: translateY(-4px); }
 
         .cd-num {
             font-family: var(--font-serif);
             font-size: clamp(2.2rem, 6vw, 3.8rem);
-            font-weight: 300;
-            color: var(--text-dark);
-            line-height: 1;
-            margin-bottom: .4rem;
-            display: block;
+            font-weight: 300; color: var(--text-dark);
+            line-height: 1; margin-bottom: .4rem; display: block;
         }
-
         .cd-lbl {
             font-family: var(--font-sans);
-            font-size: .56rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--text-light);
+            font-size: .56rem; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--text-light);
         }
-
         .cd-msg {
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-size: 1rem;
-            color: var(--text-mid);
-            margin-top: 1rem;
+            font-family: var(--font-serif); font-style: italic;
+            font-size: 1rem; color: var(--text-mid); margin-top: 1rem;
         }
 
         /* ──────────────────────────────────
            HOJA 5 · DRESSCODE + SOBRE
         ────────────────────────────────── */
-        #h5 {
-            background: linear-gradient(170deg, var(--sage-light) 0%, var(--cream) 40%);
-        }
-
+        #h5 { background: #f5f5f0; }
         #h5::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            z-index: 4;
-            pointer-events: none;
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 80px; z-index: 6; pointer-events: none;
             background: linear-gradient(to bottom, var(--sage-light), transparent);
         }
-
-        #h5::after {
-            background: linear-gradient(to bottom, transparent, var(--cream));
+        #h5::after { background: linear-gradient(to bottom, transparent, #eeede8); }
+        #h5 .dress-bg {
+            position: absolute; inset: 0;
+            background: url('assets/imagenes/fondo3.jpeg') center/cover no-repeat;
+            opacity: 1;
         }
 
-        .dress-layout {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.6rem;
-            margin: 1.8rem 0;
-        }
+        .dress-layout { display: none; } /* replaced */
+        .dress-img-box { display: none; }
+        .dress-cols { display: none; }
+        .dress-col { display: none; }
+        .dc-lbl { display: none; }
+        .dc-val { display: none; }
+        .dress-note { display: none; }
+        .sobre-box { display: none; }
+        .sobre-txt { display: none; }
+        .envelope { display: none; }
+        .env-body { display: none; }
+        .env-flap { display: none; }
+        .env-l { display: none; }
+        .env-r { display: none; }
 
-        .dress-img-box {
-            background: rgba(255, 255, 255, .88);
-            border: 1px solid rgba(201, 169, 110, .18);
-            border-radius: 26px;
-            padding: 1.8rem 2rem;
-            box-shadow: 0 8px 28px rgba(74, 63, 56, .07);
-            transition: transform .3s;
+        /* ── NEW ARCH DRESS DESIGN ── */
+        .dress-card-wrap {
+            position: relative; z-index: 10;
+            display: flex; align-items: center; justify-content: center;
+            width: 100%; min-height: 100vh; padding: 1rem;
         }
-
-        .dress-img-box:hover {
-            transform: scale(1.03);
-        }
-
-        .dress-img-box img {
-            width: 175px;
-            height: 175px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .dress-cols {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            width: 100%;
-            max-width: 460px;
-        }
-
-        .dress-col {
-            background: rgba(255, 255, 255, .82);
-            border: 1px solid rgba(201, 169, 110, .13);
-            border-radius: 18px;
-            padding: 1.4rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 16px rgba(74, 63, 56, .04);
-        }
-
-        .dc-lbl {
-            font-family: var(--font-sans);
-            font-size: .58rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: .5rem;
-        }
-
-        .dc-val {
-            font-family: var(--font-serif);
-            font-size: .98rem;
-            font-style: italic;
-            color: var(--text-dark);
-            line-height: 1.5;
-        }
-
-        .dress-note {
-            font-family: var(--font-sans);
-            font-size: .65rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-light);
-            background: rgba(201, 169, 110, .07);
-            border: 1px dashed rgba(201, 169, 110, .28);
-            border-radius: 50px;
-            padding: .55rem 1.5rem;
-            display: inline-block;
-        }
-
-        /* SOBRE */
-        .sobre-box {
-            margin-top: 2.5rem;
-            padding: 2rem 1.5rem;
-            background: linear-gradient(135deg, rgba(255, 255, 255, .92), rgba(247, 237, 218, .7));
-            border: 1px solid rgba(201, 169, 110, .18);
-            border-radius: 22px;
-            box-shadow: 0 6px 22px rgba(74, 63, 56, .06);
-            text-align: center;
-        }
-
-        .sobre-txt {
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-size: 1.12rem;
-            color: var(--text-dark);
-            margin-bottom: 1.4rem;
-        }
-
-        .envelope {
-            width: 100px;
-            height: 70px;
+        .dress-arch {
             position: relative;
-            margin: 0 auto;
-            filter: drop-shadow(0 7px 16px rgba(201, 169, 110, .35));
+            width: min(400px, 88vw);
+            text-align: center;
+        }
+        /* SVG arch frame drawn in HTML */
+        .dress-arch-svg {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 1;
+        }
+        .dress-arch-inner {
+            position: relative; z-index: 3;
+            padding: 2.8rem 2rem 2.5rem;
+            display: flex; flex-direction: column; align-items: center; gap: 1rem;
+        }
+        .dress-xv-ring {
+            position: relative; width: 140px; height: 140px;
+            display: flex; align-items: center; justify-content: center; margin: 0 auto;
+        }
+        .dress-xv-ring svg {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            animation: rotateSlow 25s linear infinite;
+        }
+        @keyframes rotateSlow { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+        .dress-xv-num {
+            font-family: var(--font-serif); font-size: 4rem; font-weight: 500;
+            color: #4a6741; line-height: 1; position: relative; z-index: 2; letter-spacing: -2px;
+        }
+        .dress-traje {
+            font-family: var(--font-script); font-size: 2.5rem; color: #4a6741; line-height: 1; margin: 0;
+        }
+        .dress-couple {
+            width: 155px; height: auto; object-fit: contain;
+            filter: drop-shadow(0 4px 14px rgba(0,0,0,.12));
+            transition: transform .4s ease;
+        }
+        .dress-couple:hover { transform: scale(1.04); }
+        .sobre-sobre {
+            font-family: var(--font-serif); font-size: 1.2rem;
+            color: #3a3530; line-height: 1.55;
+        }
+        .env-svg-wrap {
+            width: 68px; margin: 0 auto; cursor: pointer;
+            filter: drop-shadow(0 4px 10px rgba(100,100,80,.25));
             transition: transform .35s;
-            cursor: pointer;
         }
-
-        .envelope:hover {
-            transform: scale(1.08) rotate(-2deg);
-        }
-
-        .env-body {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--gold-light), #D4AF7A);
-            border-radius: 4px;
-            position: absolute;
-            bottom: 0;
-        }
-
-        .env-flap {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 38px solid #C9A96E;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 3;
-            transform-origin: top center;
-            animation: envFlap 3s ease-in-out infinite;
-        }
-
-        @keyframes envFlap {
-
-            0%,
-            100% {
-                transform: rotateX(0deg);
-            }
-
-            40%,
-            60% {
-                transform: rotateX(-22deg);
-            }
-        }
-
-        .env-l {
-            width: 0;
-            height: 0;
-            border-left: 50px solid #B8914E;
-            border-bottom: 35px solid transparent;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-
-        .env-r {
-            width: 0;
-            height: 0;
-            border-right: 50px solid #B8914E;
-            border-bottom: 35px solid transparent;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+        .env-svg-wrap:hover { transform: scale(1.1) rotate(-3deg); }
+        .env-svg-wrap svg { width: 100%; height: auto; }
 
         /* ──────────────────────────────────
            HOJA 6 · MENSAJE FINAL
         ────────────────────────────────── */
-        #h6 {
-            background: linear-gradient(160deg, var(--cream) 0%, var(--beige) 100%);
-        }
-
+        #h6 { background: linear-gradient(160deg, var(--cream) 0%, var(--beige) 100%); }
         #h6::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            z-index: 4;
-            pointer-events: none;
-            background: linear-gradient(to bottom, var(--cream), transparent);
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 80px; z-index: 4; pointer-events: none;
+            background: linear-gradient(to bottom, #eeede8, transparent);
         }
-
-        #h6::after {
-            background: linear-gradient(to bottom, transparent, var(--beige));
-        }
-
+        #h6::after { background: linear-gradient(to bottom, transparent, var(--beige)); }
         #h6 .flowers-bg {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background: url('assets/imagenes/fondo1.jpeg') center/cover no-repeat;
-            opacity: .05;
-            pointer-events: none;
+            opacity: .22; pointer-events: none;
+        }
+        #h6 .msg-text {
+            font-size: clamp(1.15rem, 3vw, 1.45rem);
+            line-height: 2.1;
+        }
+        #h6 .quote-mark {
+            font-size: 6rem;
         }
 
         /* ──────────────────────────────────
            HOJA 7 · RSVP
         ────────────────────────────────── */
-        #h7 {
-            background: linear-gradient(145deg, var(--blush-mid) 0%, var(--gold-soft) 55%, var(--blush) 100%);
-        }
-
+        #h7 { background: linear-gradient(145deg, var(--blush-mid) 0%, var(--gold-soft) 55%, var(--blush) 100%); }
         #h7::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            z-index: 4;
-            pointer-events: none;
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 80px; z-index: 4; pointer-events: none;
             background: linear-gradient(to bottom, var(--beige), transparent);
         }
-
-        #h7::after {
-            background: none;
-        }
+        #h7::after { background: none; }
 
         .rsvp-card {
-            background: rgba(255, 255, 255, .92);
-            border-radius: 26px;
-            padding: 2.5rem 2rem;
-            box-shadow: 0 16px 48px rgba(74, 63, 56, .12);
+            background: rgba(255,255,255,.92);
+            border-radius: 26px; padding: 2.5rem 2rem;
+            box-shadow: 0 16px 48px rgba(74,63,56,.12);
             margin-top: 1.5rem;
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, .8);
+            border: 1px solid rgba(255,255,255,.8);
         }
-
-        .fg {
-            margin-bottom: 1.4rem;
-        }
-
+        .fg { margin-bottom: 1.4rem; }
         .fg-lbl {
-            font-family: var(--font-sans);
-            font-size: .6rem;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--text-light);
-            display: block;
-            margin-bottom: .45rem;
+            font-family: var(--font-sans); font-size: .6rem;
+            letter-spacing: 2.5px; text-transform: uppercase;
+            color: var(--text-light); display: block; margin-bottom: .45rem;
         }
-
         .fg-input {
-            width: 100%;
-            padding: .88rem 1.15rem;
-            border: 1.5px solid rgba(201, 169, 110, .2);
+            width: 100%; padding: .88rem 1.15rem;
+            border: 1.5px solid rgba(201,169,110,.2);
             border-radius: 14px;
-            font-family: var(--font-serif);
-            font-size: .95rem;
-            color: var(--text-dark);
-            background: var(--cream);
-            outline: none;
-            transition: border-color .3s, box-shadow .3s;
+            font-family: var(--font-serif); font-size: .95rem;
+            color: var(--text-dark); background: var(--cream);
+            outline: none; transition: border-color .3s, box-shadow .3s;
         }
-
         .fg-input:focus {
             border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(201, 169, 110, .1);
+            box-shadow: 0 0 0 3px rgba(201,169,110,.1);
         }
+        .fg-input::placeholder { color: var(--text-light); opacity: .7; }
 
-        .fg-input::placeholder {
-            color: var(--text-light);
-            opacity: .7;
-        }
-
-        .radio-row {
-            display: flex;
-            gap: .8rem;
-        }
-
+        .radio-row { display: flex; gap: .8rem; }
         .r-opt {
-            flex: 1;
-            border: 1.5px solid rgba(201, 169, 110, .2);
-            border-radius: 14px;
-            padding: .82rem;
-            text-align: center;
-            cursor: pointer;
+            flex: 1; border: 1.5px solid rgba(201,169,110,.2);
+            border-radius: 14px; padding: .82rem;
+            text-align: center; cursor: pointer;
             transition: all .28s;
-            font-family: var(--font-serif);
-            font-size: .88rem;
-            color: var(--text-mid);
-            background: var(--cream);
+            font-family: var(--font-serif); font-size: .88rem;
+            color: var(--text-mid); background: var(--cream);
         }
-
         .r-opt.sel {
-            border-color: var(--gold);
-            background: var(--gold-soft);
-            color: var(--text-dark);
-            font-weight: 500;
+            border-color: var(--gold); background: var(--gold-soft);
+            color: var(--text-dark); font-weight: 500;
         }
 
-        .ctr-row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.2rem;
-        }
-
+        .ctr-row { display: flex; align-items: center; justify-content: center; gap: 1.2rem; }
         .ctr-btn {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            border: 1.5px solid var(--gold);
-            background: white;
-            color: var(--gold);
-            font-size: 1.3rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all .28s;
-            font-weight: 300;
+            width: 42px; height: 42px; border-radius: 50%;
+            border: 1.5px solid var(--gold); background: white;
+            color: var(--gold); font-size: 1.3rem; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all .28s; font-weight: 300;
         }
-
-        .ctr-btn:hover:not(:disabled) {
-            background: var(--gold);
-            color: white;
-        }
-
-        .ctr-btn:disabled {
-            opacity: .28;
-            cursor: not-allowed;
-        }
-
+        .ctr-btn:hover:not(:disabled) { background: var(--gold); color: white; }
+        .ctr-btn:disabled { opacity: .28; cursor: not-allowed; }
         .ctr-val {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            color: var(--gold);
-            min-width: 40px;
-            text-align: center;
+            font-family: var(--font-serif); font-size: 2rem;
+            color: var(--gold); min-width: 40px; text-align: center;
         }
 
         .wa-btn {
-            width: 100%;
-            padding: 1.2rem;
+            width: 100%; padding: 1.2rem;
             background: linear-gradient(135deg, #25D366, #128C7E);
-            border: none;
-            border-radius: 18px;
-            color: white;
-            font-family: var(--font-sans);
-            font-size: .86rem;
-            letter-spacing: 1px;
+            border: none; border-radius: 18px; color: white;
+            font-family: var(--font-sans); font-size: .86rem; letter-spacing: 1px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: .8rem;
+            display: flex; align-items: center; justify-content: center; gap: .8rem;
             margin-top: 1.4rem;
-            box-shadow: 0 6px 22px rgba(37, 211, 102, .28);
+            box-shadow: 0 6px 22px rgba(37,211,102,.28);
             transition: transform .3s, box-shadow .3s;
         }
-
-        .wa-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(37, 211, 102, .4);
-        }
-
-        .wa-btn svg {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-        }
+        .wa-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37,211,102,.4); }
+        .wa-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
 
         /* ── MUSIC FLOAT ── */
         .music-fab {
-            position: fixed;
-            bottom: 1.8rem;
-            right: 1.8rem;
+            position: fixed; bottom: 1.8rem; right: 1.8rem;
             z-index: 9999;
         }
-
         .music-fab button {
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
+            width: 54px; height: 54px; border-radius: 50%;
             background: linear-gradient(135deg, var(--blush-mid), var(--gold-light));
-            border: 1px solid rgba(201, 169, 110, .3);
-            box-shadow: 0 6px 20px rgba(201, 169, 110, .28);
-            cursor: pointer;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 1px solid rgba(201,169,110,.3);
+            box-shadow: 0 6px 20px rgba(201,169,110,.28);
+            cursor: pointer; font-size: 1.2rem;
+            display: flex; align-items: center; justify-content: center;
             transition: transform .3s;
             animation: fabGlow 3s ease-in-out infinite;
         }
-
-        .music-fab button:hover {
-            transform: scale(1.1);
-        }
-
-        .music-fab button.on {
-            animation: none;
-        }
-
+        .music-fab button:hover { transform: scale(1.1); }
+        .music-fab button.on { animation: none; }
         @keyframes fabGlow {
-
-            0%,
-            100% {
-                box-shadow: 0 6px 20px rgba(201, 169, 110, .28);
-            }
-
-            50% {
-                box-shadow: 0 8px 28px rgba(201, 169, 110, .5);
-            }
+            0%,100%{box-shadow:0 6px 20px rgba(201,169,110,.28);}
+            50%{box-shadow:0 8px 28px rgba(201,169,110,.5);}
         }
 
-        /* ── KEYFRAMES ── */
+        /* ════════════════════════════════
+           ── KEYFRAMES BASE ──
+        ════════════════════════════════ */
         @keyframes up {
-            from {
-                opacity: 0;
-                transform: translateY(22px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity:0; transform:translateY(22px); }
+            to   { opacity:1; transform:translateY(0); }
         }
+
+        /* Float variants — each feels organically different */
+        @keyframes floatA {
+            /* pure vertical, slow & dreamy */
+            0%,100% { transform: translateY(0); }
+            50%      { transform: translateY(-10px); }
+        }
+        @keyframes floatB {
+            /* vertical + slight tilt */
+            0%,100% { transform: translateY(0) rotate(0deg); }
+            33%      { transform: translateY(-8px) rotate(.4deg); }
+            66%      { transform: translateY(-4px) rotate(-.3deg); }
+        }
+        @keyframes floatC {
+            /* vertical + very subtle scale */
+            0%,100% { transform: translateY(0) scale(1); }
+            50%      { transform: translateY(-7px) scale(1.008); }
+        }
+        @keyframes floatD {
+            /* asymmetric bounce */
+            0%,100% { transform: translateY(0); }
+            38%      { transform: translateY(-11px); }
+            68%      { transform: translateY(-5px); }
+        }
+        @keyframes floatE {
+            /* slow sway — for arch */
+            0%,100% { transform: translateY(0) rotate(0deg); }
+            25%      { transform: translateY(-6px) rotate(.3deg); }
+            75%      { transform: translateY(-9px) rotate(-.3deg); }
+        }
+
+        /* ── SECTION CONTENT WRAPPERS ── */
+        #h1 .s-wrap       { animation: floatA 7s   ease-in-out 0s   infinite; }
+        #h2 .s-wrap       { animation: floatB 8.5s ease-in-out 1.2s infinite; }
+        #h3 .s-wrap       { animation: floatC 7s   ease-in-out 0.5s infinite; }
+        #h4 .s-wrap       { animation: floatA 6.5s ease-in-out 1.8s infinite; }
+        .dress-arch-inner { animation: floatE 9s   ease-in-out 2s   infinite; }
+        #h6 .s-wrap       { animation: floatC 7.5s ease-in-out 1s   infinite; }
+        #h7 .s-wrap       { animation: floatD 9s   ease-in-out 0.8s infinite; }
+
+        /* ── DETAIL CARDS: staggered breathe + lift ── */
+        @keyframes cardLift {
+            0%,100% { transform: translateY(0);  box-shadow: 0 5px 24px rgba(74,63,56,.05); }
+            50%      { transform: translateY(-8px); box-shadow: 0 16px 40px rgba(74,63,56,.12); }
+        }
+        .det-card               { animation: cardLift 5.5s ease-in-out infinite; }
+        .det-card:nth-child(2)  { animation-delay: 1s; }
+        .det-card:nth-child(3)  { animation-delay: 2s; }
+
+        /* ── COUNTDOWN CARDS: wave effect ── */
+        @keyframes cdWave {
+            0%,100% { transform: translateY(0);   box-shadow: 0 4px 18px rgba(74,63,56,.06); }
+            50%      { transform: translateY(-7px); box-shadow: 0 14px 32px rgba(74,63,56,.14); }
+        }
+        .cd-card               { animation: cdWave 4.5s ease-in-out infinite; }
+        .cd-card:nth-child(2)  { animation-delay: .55s; }
+        .cd-card:nth-child(3)  { animation-delay: 1.1s; }
+        .cd-card:nth-child(4)  { animation-delay: 1.65s; }
+
+        /* ── DIVIDERS: gold shimmer ── */
+        @keyframes shimmer {
+            0%   { background-position: -200% center; }
+            100% { background-position:  200% center; }
+        }
+        .divider {
+            background: linear-gradient(90deg,
+                transparent 0%,
+                var(--gold) 38%,
+                rgba(255,228,160,.95) 50%,
+                var(--gold) 62%,
+                transparent 100%);
+            background-size: 200% 100%;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        /* ── HERO BADGE: glow pulse ── */
+        @keyframes badgeGlow {
+            0%,100% { box-shadow: none;                        border-color: var(--gold-light); }
+            50%      { box-shadow: 0 0 20px rgba(201,169,110,.4); border-color: var(--gold); }
+        }
+        /* override the initial up animation with combined: appear then glow */
+        .hero-badge { animation: up 1s 1.3s forwards, badgeGlow 4.5s ease-in-out 2.8s infinite; }
+
+        /* ── MAP BUTTON: gentle bob ── */
+        @keyframes btnBob {
+            0%,100% { transform: translateY(0);  box-shadow: 0 6px 20px rgba(201,169,110,.35); }
+            50%      { transform: translateY(-5px); box-shadow: 0 14px 32px rgba(201,169,110,.48); }
+        }
+        .map-btn { animation: btnBob 5s ease-in-out 1s infinite; }
+
+        /* ── WHATSAPP BUTTON: green pulse ── */
+        @keyframes waPulse {
+            0%,100% { box-shadow: 0 6px 22px rgba(37,211,102,.28); }
+            50%      { box-shadow: 0 14px 40px rgba(37,211,102,.52); }
+        }
+        .wa-btn { animation: waPulse 4s ease-in-out infinite; }
+
+        /* ── RSVP CARD: soft lift ── */
+        @keyframes rsvpFloat {
+            0%,100% { box-shadow: 0 16px 48px rgba(74,63,56,.12); transform: translateY(0); }
+            50%      { box-shadow: 0 26px 64px rgba(74,63,56,.20); transform: translateY(-6px); }
+        }
+        .rsvp-card { animation: rsvpFloat 7s ease-in-out 1s infinite; }
+
+        /* ── COUPLE IMAGE: soft sway ── */
+        @keyframes coupleSway {
+            0%,100% { transform: rotate(0deg)   translateY(0); }
+            33%      { transform: rotate(.7deg)  translateY(-3px); }
+            66%      { transform: rotate(-.5deg) translateY(-1px); }
+        }
+        .dress-couple { animation: coupleSway 6.5s ease-in-out infinite; }
+
+        /* ── ENVELOPE: float + tilt ── */
+        @keyframes envFloat {
+            0%,100% { transform: translateY(0)   rotate(0deg); }
+            50%      { transform: translateY(-7px) rotate(-5deg); }
+        }
+        .env-svg-wrap { animation: envFloat 4s ease-in-out 1.2s infinite; }
+
+        /* ── SPARKLE RING (h5): slow spin already set; add a pulse ── */
+        @keyframes ringPulse {
+            0%,100% { opacity: .6; }
+            50%      { opacity: 1; }
+        }
+        .dress-xv-ring svg { animation: rotateSlow 25s linear infinite, ringPulse 3s ease-in-out infinite; }
+
+        /* ── PETALS: already falling; add a random drift ── */
+        .petals span:nth-child(odd)  { animation-timing-function: ease-in-out; }
+        .petals span:nth-child(even) { animation-timing-function: linear; }
+
+        /* ── MUSIC FAB: keep existing glow, add a bob ── */
+        @keyframes fabBob {
+            0%,100% { transform: translateY(0); }
+            50%      { transform: translateY(-5px); }
+        }
+        .music-fab button { animation: fabGlow 3s ease-in-out infinite, fabBob 5s ease-in-out 1s infinite; }
+        .music-fab button.on { animation: fabBob 5s ease-in-out 1s infinite; }
+
+        /* ── SCROLL CUE LINE: existing linePulse is good, keep ── */
 
         /* ── RESPONSIVE ── */
-        @media(max-width:480px) {
-            .cd-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: .8rem;
-            }
-
-            .dress-img-box img {
-                width: 140px;
-                height: 140px;
-            }
-
-            .dress-cols {
-                gap: .7rem;
-            }
-
-            .det-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .rsvp-card {
-                padding: 2rem 1.3rem;
-            }
-
-            .radio-row {
-                flex-direction: column;
-            }
+        @media(max-width:480px){
+            .cd-grid{grid-template-columns:repeat(2,1fr);gap:.8rem;}
+            .dress-img-box img{width:140px;height:140px;}
+            .dress-cols{gap:.7rem;}
+            .det-grid{grid-template-columns:1fr;}
+            .rsvp-card{padding:2rem 1.3rem;}
+            .radio-row{flex-direction:column;}
         }
-
-        @media(min-width:600px) {
-            .dress-layout {
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 2rem;
-            }
-
-            .dress-cols {
-                grid-template-columns: 1fr;
-                max-width: 210px;
-                align-self: center;
-            }
+        @media(min-width:600px){
+            .dress-layout{flex-direction:row;align-items:flex-start;justify-content:center;gap:2rem;}
+            .dress-cols{grid-template-columns:1fr;max-width:210px;align-self:center;}
         }
     </style>
 </head>
-
 <body>
 
-    <!-- ══ HOJA 1 · HERO ══ -->
-    <section id="h1">
-        <div class="bg"></div>
-        <div class="ov"></div>
-        <div class="s-wrap" style="position:relative;z-index:10;">
-            <p class="hero-pre">Estás invitado a celebrar</p>
-            <p class="hero-sub">los quince años de</p>
-            <h1 class="hero-name">Paulina</h1>
-            <span class="hero-badge">XV Años · 2026</span>
-        </div>
-        <div class="scroll-cue">
-            <span>Desliza</span>
-            <div class="line"></div>
-        </div>
-    </section>
-
-    <!-- ══ HOJA 2 · MENSAJE ══ -->
-    <section id="h2">
-        <div class="bg"></div>
-        <div class="ov"></div>
-        <div class="s-wrap fade-in" style="max-width:670px;">
-            <span class="s-label">Un mensaje del corazón</span>
-            <div class="divider"></div>
-            <span class="quote-mark">"</span>
-            <p class="msg-text">
-                Cada año vivido ha sido un paso más hacia la persona que soy hoy, y mis quince años representan el
-                inicio de una nueva etapa llena de sueños, esperanzas y nuevos comienzos. Quiero celebrar este momento
-                rodeada de amor, alegría y de las personas que siempre han estado conmigo en las buenas y en las
-                difíciles. Por eso me haría muy feliz que me acompañaras en esta noche tan importante, donde cada
-                sonrisa y cada abrazo serán recuerdos que guardaré para siempre en mi corazón.
-            </p>
-            <div class="divider" style="margin-top:1.8rem;"></div>
-            <p
-                style="font-family:var(--font-serif);font-style:italic;font-size:.98rem;color:var(--text-light);margin-top:.9rem;">
-                Con todo mi amor, <span
-                    style="font-family:var(--font-script);font-size:1.9rem;color:var(--text-dark);vertical-align:middle;margin-left:.3rem;">Paulina</span>
-            </p>
-        </div>
-    </section>
-
-    <!-- ══ HOJA 3 · DETALLES ══ -->
-    <section id="h3">
-        <div class="s-wrap fade-in" style="max-width:820px;">
-            <span class="s-label">La velada perfecta</span>
-            <h2 class="s-title">Detalles del Evento</h2>
-            <div class="divider"></div>
-
-            <div class="det-grid">
-                <div class="det-card">
-                    <div class="det-icon">🗓️</div>
-                    <p class="det-label">Fecha</p>
-                    <p class="det-val">Sábado, 21 de Marzo</p>
-                    <p class="det-sub">2026</p>
-                </div>
-                <div class="det-card">
-                    <div class="det-icon">🕖</div>
-                    <p class="det-label">Hora</p>
-                    <p class="det-val">7:30 PM</p>
-                    <p class="det-sub">Puntualidad apreciada</p>
-                </div>
-                <div class="det-card">
-                    <div class="det-icon">📍</div>
-                    <p class="det-label">Lugar</p>
-                    <p class="det-val">Carrera 38 # 55<br>Dalujo #2</p>
-                    <p class="det-sub">Barrio Boston</p>
-                </div>
-            </div>
-
-            <a class="map-btn" href="https://maps.google.com/?q=Carrera+38+%2355+Barrio+Boston+Medellin"
-                target="_blank">
-                📍 &nbsp;Ver ubicación en Maps
-            </a>
-        </div>
-    </section>
-
-    <!-- ══ HOJA 4 · COUNTDOWN ══ -->
-    <section id="h4">
-        <div class="petals">
-            <span>🌸</span><span>🌷</span><span>🌸</span><span>🌷</span><span>🌸</span>
-        </div>
-        <div class="s-wrap fade-in" style="max-width:680px;">
-            <span class="s-label">El gran momento se acerca</span>
-            <h2 class="s-title">Faltan</h2>
-            <div class="divider"></div>
-
-            <div class="cd-grid">
-                <div class="cd-card"><span class="cd-num" id="days">00</span><span class="cd-lbl">Días</span></div>
-                <div class="cd-card"><span class="cd-num" id="hours">00</span><span class="cd-lbl">Horas</span></div>
-                <div class="cd-card"><span class="cd-num" id="minutes">00</span><span class="cd-lbl">Minutos</span>
-                </div>
-                <div class="cd-card"><span class="cd-num" id="seconds">00</span><span class="cd-lbl">Segundos</span>
-                </div>
-            </div>
-
-            <p class="cd-msg" id="cdMsg">Para celebrar juntos este momento tan especial ✨</p>
-        </div>
-    </section>
-
-    <!-- ══ HOJA 5 · DRESSCODE + SOBRE ══ -->
-    <section id="h5">
-        <div class="s-wrap fade-in" style="max-width:620px;">
-            <span class="s-label">Luce espectacular</span>
-            <h2 class="s-title">Estilo para esta ocasión</h2>
-            <div class="divider"></div>
-            <p
-                style="font-family:var(--font-serif);font-style:italic;font-size:1rem;color:var(--text-mid);margin-bottom:1.5rem;">
-                Traje formal · Elegancia en tonos suaves
-            </p>
-
-            <div class="dress-layout">
-                <div class="dress-img-box">
-                    <img src="assets/imagenes/pareja.png" alt="Código de vestimenta formal">
-                </div>
-                <div class="dress-cols">
-                    <div class="dress-col">
-                        <p class="dc-lbl">👗 Mujeres</p>
-                        <p class="dc-val">Vestido largo o traje formal en tonos pastel o suaves</p>
-                    </div>
-                    <div class="dress-col">
-                        <p class="dc-lbl">🤵 Hombres</p>
-                        <p class="dc-val">Traje oscuro con corbata o moño elegante</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SOBRE -->
-            <div class="sobre-box">
-                <p class="sobre-txt">Recibiré con amor tu detalle en sobre 💛</p>
-                <div class="envelope">
-                    <div class="env-body"></div>
-                    <div class="env-flap"></div>
-                    <div class="env-l"></div>
-                    <div class="env-r"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══ HOJA 6 · MENSAJE FINAL ══ -->
-    <section id="h6">
-        <div class="flowers-bg"></div>
-        <div class="s-wrap fade-in" style="max-width:650px;">
-            <span class="s-label">Con gratitud</span>
-            <div class="divider"></div>
-            <span class="quote-mark" style="color:var(--gold);">"</span>
-            <p class="msg-text">
-                Gracias por ser parte de mi historia y de cada paso que me ha traído hasta aquí. Espero compartir
-                contigo esta noche tan significativa y crear recuerdos que atesoraremos por siempre.
-            </p>
-            <div class="divider" style="margin-top:2rem;"></div>
-            <p style="font-family:var(--font-script);font-size:3rem;color:var(--text-dark);margin-top:.8rem;">Paulina
-            </p>
-        </div>
-    </section>
-
-    <!-- ══ HOJA 7 · RSVP ══ -->
-    <section id="h7">
-        <div class="s-wrap" style="max-width:510px;">
-            <span class="s-label">No te pierdas esta noche</span>
-            <h2 class="s-title">Confirma tu asistencia</h2>
-            <div class="divider"></div>
-            <p
-                style="font-family:var(--font-serif);font-style:italic;font-size:.98rem;color:var(--text-mid);margin-bottom:.4rem;">
-                Antes del <strong style="color:var(--text-dark);">10 de Marzo</strong>
-            </p>
-
-            <div class="rsvp-card">
-                <div class="fg">
-                    <label class="fg-lbl">Tu nombre completo</label>
-                    <input type="text" class="fg-input" id="guestName" placeholder="Ej: María González">
-                </div>
-
-                <div class="fg">
-                    <label class="fg-lbl">¿Confirmas tu asistencia?</label>
-                    <div class="radio-row">
-                        <div class="r-opt sel" id="optYes" onclick="selAtt('yes')">😊 ¡Sí, ahí estaré!</div>
-                        <div class="r-opt" id="optNo" onclick="selAtt('no')">😔 No podré</div>
-                    </div>
-                </div>
-
-                <div class="fg" id="compGrp">
-                    <label class="fg-lbl">Número de acompañantes</label>
-                    <div class="ctr-row">
-                        <button class="ctr-btn" id="decBtn" onclick="chg(-1)" disabled>−</button>
-                        <span class="ctr-val" id="cnt">0</span>
-                        <button class="ctr-btn" id="incBtn" onclick="chg(1)">+</button>
-                    </div>
-                    <p
-                        style="font-family:var(--font-sans);font-size:.68rem;color:var(--text-light);margin-top:.45rem;font-style:italic;">
-                        Tú ya estás contado/a</p>
-                </div>
-
-                <button class="wa-btn" onclick="sendWA()">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
-                    Confirmar por WhatsApp
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- MUSIC -->
-    <div class="music-fab">
-        <button id="mBtn" onclick="togMusic()">🎵</button>
+<!-- ══ HOJA 1 · HERO ══ -->
+<section id="h1">
+    <div class="bg"></div>
+    <div class="ov"></div>
+    <div class="s-wrap" style="position:relative;z-index:10;">
+        <p class="hero-pre">Estás invitado a celebrar</p>
+        <p class="hero-sub">los quince años de</p>
+        <h1 class="hero-name">Paulina</h1>
+        <span class="hero-badge">XV Años · 2026</span>
     </div>
-    <audio id="bgM" loop>
-        <source src="assets/audio/song.mp3" type="audio/mpeg">
-    </audio>
+    <div class="scroll-cue">
+        <span>Desliza</span>
+        <div class="line"></div>
+    </div>
+</section>
 
-    <script>
-        // ─── COUNTDOWN ───
-        function tick() {
-            const ev = new Date('2026-03-21T19:30:00').getTime();
-            const now = Date.now();
-            const d = ev - now;
-            if (d <= 0) {
-                ['days', 'hours', 'minutes', 'seconds'].forEach(i => document.getElementById(i).textContent = '00');
-                document.getElementById('cdMsg').textContent = '¡El gran día ha llegado! 🎊';
-                return;
-            }
-            const fmt = v => String(v).padStart(2, '0');
-            const set = (id, v) => {
-                const el = document.getElementById(id);
-                const f = fmt(v);
-                if (el.textContent !== f) { el.textContent = f; }
-            };
-            set('days', Math.floor(d / (864e5)));
-            set('hours', Math.floor((d % 864e5) / 36e5));
-            set('minutes', Math.floor((d % 36e5) / 6e4));
-            set('seconds', Math.floor((d % 6e4) / 1e3));
-        }
-        tick(); setInterval(tick, 1000);
+<!-- ══ HOJA 2 · MENSAJE ══ -->
+<section id="h2">
+    <div class="bg"></div>
+    <div class="ov"></div>
+    <div class="s-wrap fade-in" style="max-width:670px;">
+        <span class="s-label">Un mensaje del corazón</span>
+        <div class="divider"></div>
+        <span class="quote-mark">"</span>
+        <p class="msg-text">
+            Cada año vivido ha sido un paso más hacia la persona que soy hoy, y mis quince años representan el inicio de una nueva etapa llena de sueños, esperanzas y nuevos comienzos. Quiero celebrar este momento rodeada de amor, alegría y de las personas que siempre han estado conmigo en las buenas y en las difíciles. Por eso me haría muy feliz que me acompañaras en esta noche tan importante, donde cada sonrisa y cada abrazo serán recuerdos que guardaré para siempre en mi corazón.
+        </p>
+        <div class="divider" style="margin-top:1.8rem;"></div>
+        <p style="font-family:var(--font-serif);font-style:italic;font-size:.98rem;color:var(--text-light);margin-top:.9rem;">
+            Con todo mi amor, <span style="font-family:var(--font-script);font-size:1.9rem;color:var(--text-dark);vertical-align:middle;margin-left:.3rem;">Paulina</span>
+        </p>
+    </div>
+</section>
 
-        // ─── RSVP ───
-        let att = 'yes', comp = 0;
-        function selAtt(v) {
-            att = v;
-            document.getElementById('optYes').classList.toggle('sel', v === 'yes');
-            document.getElementById('optNo').classList.toggle('sel', v === 'no');
-            document.getElementById('compGrp').style.display = v === 'yes' ? 'block' : 'none';
-        }
-        function chg(d) {
-            comp = Math.max(0, Math.min(5, comp + d));
-            document.getElementById('cnt').textContent = comp;
-            document.getElementById('decBtn').disabled = comp === 0;
-            document.getElementById('incBtn').disabled = comp === 5;
-        }
-        function sendWA() {
-            const name = document.getElementById('guestName').value.trim();
-            if (!name) {
-                const inp = document.getElementById('guestName');
-                inp.style.borderColor = '#e88'; inp.focus();
-                setTimeout(() => inp.style.borderColor = '', 2000); return;
-            }
-            let m = `*XV Años de Paulina*\n\nNombre: ${name}\n`;
-            if (att === 'yes') {
-                const t = comp + 1;
-                m += `Asistencia: ¡Confirmo mi asistencia!\nTotal: ${t} persona${t > 1 ? 's' : ''}`;
-                if (comp > 0) m += ` (yo + ${comp} acompañante${comp > 1 ? 's' : ''})`;
-                m += '\n\n¡Nos vemos el 21 de Marzo a las 7:30 PM!';
-            } else {
-                m += 'Asistencia: Lamentablemente no podré asistir\n\nMuchas gracias por la invitación';
-            }
-            window.open(`https://wa.me/573154629954?text=${encodeURIComponent(m)}`, '_blank');
-        }
+<!-- ══ HOJA 3 · DETALLES ══ -->
+<section id="h3">
+    <div class="s-wrap fade-in" style="max-width:820px;">
+        <span class="s-label">La velada perfecta</span>
+        <h2 class="s-title">Detalles del Evento</h2>
+        <div class="divider"></div>
 
-        // ─── MUSIC ───
-        let playing = false;
-        function togMusic() {
-            const a = document.getElementById('bgM');
-            const b = document.getElementById('mBtn');
-            playing ? (a.pause(), b.textContent = '🎵', b.classList.remove('on'))
-                : (a.play().catch(() => { }), b.textContent = '⏸', b.classList.add('on'));
-            playing = !playing;
-        }
+        <div class="det-grid">
+            <div class="det-card">
+                <div class="det-icon">🗓️</div>
+                <p class="det-label">Fecha</p>
+                <p class="det-val">Sábado, 21 de Marzo</p>
+                <p class="det-sub">2026</p>
+            </div>
+            <div class="det-card">
+                <div class="det-icon">🕖</div>
+                <p class="det-label">Hora</p>
+                <p class="det-val">7:30 PM</p>
+                <p class="det-sub">Puntualidad apreciada</p>
+            </div>
+            <div class="det-card">
+                <div class="det-icon">📍</div>
+                <p class="det-label">Lugar</p>
+                <p class="det-val">Carrera 38 # 55<br>Dalujo #2</p>
+                <p class="det-sub">Barrio Boston</p>
+            </div>
+        </div>
 
-        // ─── SCROLL REVEAL ───
-        const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: .12 });
-        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-    </script>
+        <a class="map-btn" href="https://maps.google.com/?q=Carrera+38+%2355+Barrio+Boston+Medellin" target="_blank">
+            📍 &nbsp;Ver ubicación en Maps
+        </a>
+    </div>
+</section>
+
+<!-- ══ HOJA 4 · COUNTDOWN ══ -->
+<section id="h4">
+    <div class="petals">
+        <span>🌸</span><span>🌷</span><span>🌸</span><span>🌷</span><span>🌸</span>
+    </div>
+    <div class="s-wrap fade-in" style="max-width:680px;">
+        <span class="s-label">El gran momento se acerca</span>
+        <h2 class="s-title">Faltan</h2>
+        <div class="divider"></div>
+
+        <div class="cd-grid">
+            <div class="cd-card"><span class="cd-num" id="days">00</span><span class="cd-lbl">Días</span></div>
+            <div class="cd-card"><span class="cd-num" id="hours">00</span><span class="cd-lbl">Horas</span></div>
+            <div class="cd-card"><span class="cd-num" id="minutes">00</span><span class="cd-lbl">Minutos</span></div>
+            <div class="cd-card"><span class="cd-num" id="seconds">00</span><span class="cd-lbl">Segundos</span></div>
+        </div>
+
+        <p class="cd-msg" id="cdMsg">Para celebrar juntos este momento tan especial ✨</p>
+    </div>
+</section>
+
+<!-- ══ HOJA 5 · DRESSCODE + SOBRE ══ -->
+<section id="h5">
+    <div class="dress-bg"></div>
+    <div class="dress-card-wrap">
+        <div class="dress-arch">
+            <!-- SVG arch border drawn inline -->
+            <svg class="dress-arch-svg" viewBox="0 0 400 580" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <!-- Arch frame -->
+                <path d="M 40 560 L 40 180 Q 40 40 200 40 Q 360 40 360 180 L 360 560 Z"
+                      stroke="#6b8f62" stroke-width="1.5" fill="none" opacity="0.7"/>
+                <!-- Inner arch -->
+                <path d="M 60 560 L 60 185 Q 60 65 200 65 Q 340 65 340 185 L 340 560 Z"
+                      stroke="#6b8f62" stroke-width="0.7" fill="none" opacity="0.35"/>
+            </svg>
+
+            <div class="dress-arch-inner">
+                <!-- Sparkle ring + 15 -->
+                <div class="dress-xv-ring">
+                    <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="70" cy="70" r="58" stroke="#6b8f62" stroke-width="0.6" stroke-dasharray="2 6" opacity="0.6"/>
+                        <!-- sparkle dots around ring -->
+                        <g fill="#4a6741" opacity="0.7">
+                            <circle cx="70" cy="10" r="1.5"/>
+                            <circle cx="116" cy="30" r="1"/>
+                            <circle cx="130" cy="70" r="1.5"/>
+                            <circle cx="116" cy="110" r="1"/>
+                            <circle cx="70" cy="130" r="1.5"/>
+                            <circle cx="24" cy="110" r="1"/>
+                            <circle cx="10" cy="70" r="1.5"/>
+                            <circle cx="24" cy="30" r="1"/>
+                        </g>
+                        <!-- 4-pointed stars around -->
+                        <g stroke="#4a6741" stroke-width="0.8" opacity="0.6">
+                            <line x1="70" y1="6" x2="70" y2="14"/><line x1="66" y1="10" x2="74" y2="10"/>
+                            <line x1="120" y1="40" x2="120" y2="48"/><line x1="116" y1="44" x2="124" y2="44"/>
+                            <line x1="16" y1="90" x2="16" y2="98"/><line x1="12" y1="94" x2="20" y2="94"/>
+                            <line x1="118" y1="92" x2="118" y2="100"/><line x1="114" y1="96" x2="122" y2="96"/>
+                            <line x1="22" y1="38" x2="22" y2="46"/><line x1="18" y1="42" x2="26" y2="42"/>
+                        </g>
+                    </svg>
+                    <span class="dress-xv-num">15</span>
+                </div>
+
+                <!-- Script title -->
+                <p class="dress-traje">Traje Formal</p>
+
+                <!-- Couple image -->
+                <img class="dress-couple" src="assets/imagenes/pareja.jpeg" alt="Código de vestimenta">
+
+                <!-- Sobre text -->
+                <p class="sobre-sobre">Recibiré con amor tu<br>detalle en sobre.</p>
+
+                <!-- Envelope SVG icon -->
+                <div class="env-svg-wrap">
+                    <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- envelope body -->
+                        <rect x="2" y="10" width="76" height="48" rx="4" fill="#e8e0d5" stroke="#9a9080" stroke-width="1.2"/>
+                        <!-- envelope flap (open) -->
+                        <path d="M 2 10 L 40 38 L 78 10" stroke="#9a9080" stroke-width="1.2" fill="none"/>
+                        <!-- second envelope behind -->
+                        <rect x="8" y="4" width="72" height="44" rx="3" fill="#d8d0c5" stroke="#9a9080" stroke-width="1" opacity="0.6"/>
+                        <path d="M 8 4 L 44 30 L 80 4" stroke="#9a9080" stroke-width="1" fill="none" opacity="0.6"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ HOJA 6 · MENSAJE FINAL ══ -->
+<section id="h6">
+    <div class="flowers-bg"></div>
+    <div class="s-wrap fade-in" style="max-width:650px;">
+        <span class="s-label">Con gratitud</span>
+        <div class="divider"></div>
+        <span class="quote-mark" style="color:var(--gold);">"</span>
+        <p class="msg-text">
+            Gracias por ser parte de mi historia y de cada paso que me ha traído hasta aquí. Espero compartir contigo esta noche tan significativa y crear recuerdos que atesoraremos por siempre.
+        </p>
+        <div class="divider" style="margin-top:2rem;"></div>
+        <p style="font-family:var(--font-script);font-size:3rem;color:var(--text-dark);margin-top:.8rem;">Paulina</p>
+    </div>
+</section>
+
+<!-- ══ HOJA 7 · RSVP ══ -->
+<section id="h7">
+    <div class="s-wrap" style="max-width:510px;">
+        <span class="s-label">No te pierdas esta noche</span>
+        <h2 class="s-title">Confirma tu asistencia</h2>
+        <div class="divider"></div>
+        <p style="font-family:var(--font-serif);font-style:italic;font-size:.98rem;color:var(--text-mid);margin-bottom:.4rem;">
+            Antes del <strong style="color:var(--text-dark);">10 de Marzo</strong>
+        </p>
+
+        <div class="rsvp-card">
+            <div class="fg">
+                <label class="fg-lbl">Tu nombre completo</label>
+                <input type="text" class="fg-input" id="guestName" placeholder="Ej: María González">
+            </div>
+
+            <div class="fg">
+                <label class="fg-lbl">¿Confirmas tu asistencia?</label>
+                <div class="radio-row">
+                    <div class="r-opt sel" id="optYes" onclick="selAtt('yes')">😊 ¡Sí, ahí estaré!</div>
+                    <div class="r-opt"     id="optNo"  onclick="selAtt('no')">😔 No podré</div>
+                </div>
+            </div>
+
+            <div class="fg" id="compGrp">
+                <label class="fg-lbl">Número de acompañantes</label>
+                <div class="ctr-row">
+                    <button class="ctr-btn" id="decBtn" onclick="chg(-1)" disabled>−</button>
+                    <span class="ctr-val" id="cnt">0</span>
+                    <button class="ctr-btn" id="incBtn" onclick="chg(1)">+</button>
+                </div>
+                <p style="font-family:var(--font-sans);font-size:.68rem;color:var(--text-light);margin-top:.45rem;font-style:italic;">Tú ya estás contado/a</p>
+            </div>
+
+            <button class="wa-btn" onclick="sendWA()">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Confirmar por WhatsApp
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- MUSIC -->
+<div class="music-fab">
+    <button id="mBtn" onclick="togMusic()">🎵</button>
+</div>
+<audio id="bgM" loop><source src="assets/audio/song.mp3" type="audio/mpeg"></audio>
+
+<script>
+// ─── COUNTDOWN ───
+function tick(){
+    const ev=new Date('2026-03-21T19:30:00').getTime();
+    const now=Date.now();
+    const d=ev-now;
+    if(d<=0){
+        ['days','hours','minutes','seconds'].forEach(i=>document.getElementById(i).textContent='00');
+        document.getElementById('cdMsg').textContent='¡El gran día ha llegado! 🎊';
+        return;
+    }
+    const fmt=v=>String(v).padStart(2,'0');
+    const set=(id,v)=>{
+        const el=document.getElementById(id);
+        const f=fmt(v);
+        if(el.textContent!==f){el.textContent=f;}
+    };
+    set('days',  Math.floor(d/(864e5)));
+    set('hours', Math.floor((d%864e5)/36e5));
+    set('minutes',Math.floor((d%36e5)/6e4));
+    set('seconds',Math.floor((d%6e4)/1e3));
+}
+tick(); setInterval(tick,1000);
+
+// ─── RSVP ───
+let att='yes', comp=0;
+function selAtt(v){
+    att=v;
+    document.getElementById('optYes').classList.toggle('sel',v==='yes');
+    document.getElementById('optNo').classList.toggle('sel',v==='no');
+    document.getElementById('compGrp').style.display=v==='yes'?'block':'none';
+}
+function chg(d){
+    comp=Math.max(0,Math.min(5,comp+d));
+    document.getElementById('cnt').textContent=comp;
+    document.getElementById('decBtn').disabled=comp===0;
+    document.getElementById('incBtn').disabled=comp===5;
+}
+function sendWA(){
+    const name=document.getElementById('guestName').value.trim();
+    if(!name){
+        const inp=document.getElementById('guestName');
+        inp.style.borderColor='#e88'; inp.focus();
+        setTimeout(()=>inp.style.borderColor='',2000); return;
+    }
+    let m=`🌸 *XV Años de Paulina*\n\nNombre: ${name}\n`;
+    if(att==='yes'){
+        const t=comp+1;
+        m+=`Asistencia: ✅ ¡Confirmo mi asistencia!\nTotal: ${t} persona${t>1?'s':''}`;
+        if(comp>0) m+=` (yo + ${comp} acompañante${comp>1?'s':''})`;
+        m+='\n\n¡Nos vemos el 21 de Marzo a las 7:30 PM! 🎊';
+    } else {
+        m+='Asistencia: ❌ Lamentablemente no podré asistir\n\nMuchas gracias por la invitación 💛';
+    }
+    window.open(`https://wa.me/573154629954?text=${encodeURIComponent(m)}`,'_blank');
+}
+
+// ─── MUSIC ───
+let playing=false;
+function togMusic(){
+    const a=document.getElementById('bgM');
+    const b=document.getElementById('mBtn');
+    playing ? (a.pause(),b.textContent='🎵',b.classList.remove('on'))
+            : (a.play().catch(()=>{}),b.textContent='⏸',b.classList.add('on'));
+    playing=!playing;
+}
+
+// ─── SCROLL REVEAL ───
+const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:.12});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
 </body>
-
-
 </html>
-
