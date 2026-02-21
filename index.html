@@ -852,6 +852,8 @@
                 </div>
                 <br>
                 <br>
+                <br>
+                <br>
                 <!-- Script title -->
                 <p class="dress-traje">Traje Formal</p>
 
@@ -988,14 +990,14 @@ function sendWA(){
         inp.style.borderColor='#e88'; inp.focus();
         setTimeout(()=>inp.style.borderColor='',2000); return;
     }
-    let m=`🌸 *XV Años de Paulina*\n\nNombre: ${name}\n`;
+    let m=`*XV Años de Paulina*\n\nNombre: ${name}\n`;
     if(att==='yes'){
         const t=comp+1;
-        m+=`Asistencia: ✅ ¡Confirmo mi asistencia!\nTotal: ${t} persona${t>1?'s':''}`;
+        m+=`Asistencia: ¡Confirmo mi asistencia!\nTotal: ${t} persona${t>1?'s':''}`;
         if(comp>0) m+=` (yo + ${comp} acompañante${comp>1?'s':''})`;
-        m+='\n\n¡Nos vemos el 21 de Marzo a las 7:30 PM! 🎊';
+        m+='\n\n¡Nos vemos el 21 de Marzo a las 7:30 PM!';
     } else {
-        m+='Asistencia: ❌ Lamentablemente no podré asistir\n\nMuchas gracias por la invitación 💛';
+        m+='Asistencia: Lamentablemente no podré asistir\n\nMuchas gracias por la invitación ';
     }
     window.open(`https://wa.me/573154629954?text=${encodeURIComponent(m)}`,'_blank');
 }
@@ -1019,4 +1021,5 @@ document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 </body>
 
 </html>
+
 
