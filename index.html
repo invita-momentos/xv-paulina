@@ -8,6 +8,43 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        /* ─── OVERLAY INICIO ─── */
+#startOverlay{
+    position:absolute;
+    inset:0;
+    background:rgba(250,248,244,.85);
+    backdrop-filter: blur(8px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:50;
+    cursor:pointer;
+    transition: opacity .8s ease, visibility .8s ease;
+}
+
+#startOverlay.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.start-box{
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+    padding: 1.2rem 2rem;
+    border: 1px solid var(--gold-light);
+    border-radius: 40px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(201,169,110,.25);
+    animation: pulseStart 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseStart{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+}
+
         :root {
             --gold:        #C9A96E;
             --gold-light:  #EDD9B2;
@@ -507,6 +544,11 @@
 <section id="h1">
     <div class="bg"></div>
     <div class="ov"></div>
+    <div id="startOverlay">
+    <div class="start-box">
+        ✨ Toca para comenzar la experiencia ✨
+    </div>
+</div>
     <div class="s-wrap" style="position:relative;z-index:10;">
         <p class="hero-pre">Estás invitado a celebrar</p>
         <p class="hero-sub">los quince años de</p>
@@ -691,24 +733,14 @@
 
 <script>
 // ─── AUTOPLAY MUSIC ───
+// ─── START EXPERIENCE ───
 const audio = document.getElementById('bgM');
+const overlay = document.getElementById('startOverlay');
 
-function startMusic() {
-    audio.play().catch(() => {});
-}
-
-audio.addEventListener('canplay', startMusic);
-window.addEventListener('load', startMusic);
-
-function retryPlay() {
-    startMusic();
-    document.removeEventListener('touchstart', retryPlay);
-    document.removeEventListener('click',      retryPlay);
-    document.removeEventListener('scroll',     retryPlay);
-}
-document.addEventListener('touchstart', retryPlay, { passive: true });
-document.addEventListener('click',      retryPlay, { once: true });
-document.addEventListener('scroll',     retryPlay, { passive: true, once: true });
+overlay.addEventListener('click', () => {
+    audio.play().catch(()=>{});
+    overlay.classList.add('hide');
+});
 
 // ─── COUNTDOWN ───
 function tick(){
