@@ -8,18 +8,20 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* ─── OVERLAY INICIO ─── */
+/* ─── OVERLAY INICIO RESPONSIVE ─── */
 #startOverlay{
     position:absolute;
     inset:0;
-    background:rgba(250,248,244,.85);
-    backdrop-filter: blur(8px);
+    background:rgba(250,248,244,.92);
+    backdrop-filter: blur(10px);
     display:flex;
     align-items:center;
     justify-content:center;
     z-index:50;
     cursor:pointer;
     transition: opacity .8s ease, visibility .8s ease;
+    padding: 1.5rem;
+    text-align:center;
 }
 
 #startOverlay.hide{
@@ -29,15 +31,17 @@
 
 .start-box{
     font-family: var(--font-serif);
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    letter-spacing: 1.5px;
     color: var(--text-dark);
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 1.8rem;
     border: 1px solid var(--gold-light);
     border-radius: 40px;
     background: white;
     box-shadow: 0 10px 30px rgba(201,169,110,.25);
     animation: pulseStart 2.5s ease-in-out infinite;
+    max-width: 320px;
+    line-height: 1.5;
 }
 
 @keyframes pulseStart{
